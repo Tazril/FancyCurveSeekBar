@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="32dp"
+    android:theme="@style/Theme.MaterialComponents.Light.DarkActionBar"
+    app:layout_behavior="@string/bottom_sheet_behavior"
+    tools:ignore="MissingPrefix">
+
+    <com.google.android.material.textview.MaterialTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/filter"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <com.google.android.material.chip.ChipGroup
+        android:id="@+id/filterChipGroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp"
+        app:checkedChip="@+id/dateChip"
+        app:chipSpacingHorizontal="8dp"
+        app:chipSpacingVertical="8dp"
+        app:singleSelection="true">
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/dateChip"
+            style="@style/ChipCustomStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/date"
+            android:textColor="@color/bg_chip_text_state_list"
+            app:chipBackgroundColor="@color/bg_chip_state_list"
+            app:closeIconEndPadding="8dp"
+            app:closeIconEnabled="true"
+            app:closeIcon="@drawable/ic_sort"
+            app:closeIconTint="@color/bg_chip_text_state_list"
+            app:closeIconVisible="true" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/amountChip"
+            style="@style/ChipCustomStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/amount"
+            app:closeIconEnabled="true"
+            app:closeIconEndPadding="8dp"
+            android:textColor="@color/bg_chip_text_state_list"
+            app:chipBackgroundColor="@color/bg_chip_state_list"
+            app:closeIcon="@drawable/ic_sort"
+            app:closeIconTint="@color/bg_chip_text_state_list"
+            app:closeIconVisible="true" />
+
+    </com.google.android.material.chip.ChipGroup>
+
+    <com.google.android.material.textview.MaterialTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/trade_type"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <com.google.android.material.chip.ChipGroup
+        android:id="@+id/tradeTypeChipGroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp"
+        app:chipSpacingHorizontal="8dp"
+        app:chipSpacingVertical="8dp"
+        app:singleSelection="true">
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/boughtChip"
+            style="@style/ChipCustomStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/bought"
+            android:textColor="@color/bg_chip_text_state_list"
+            app:chipBackgroundColor="@color/bg_chip_state_list"
+            app:chipEndPadding="8dp"
+            app:chipStartPadding="8dp" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/soldChip"
+            style="@style/ChipCustomStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/sold"
+            android:textColor="@color/bg_chip_text_state_list"
+            app:chipBackgroundColor="@color/bg_chip_state_list"
+            app:chipEndPadding="8dp"
+            app:chipStartPadding="8dp" />
+
+    </com.google.android.material.chip.ChipGroup>
+
+    <com.google.android.material.textview.MaterialTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/time"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        tools:layout_editor_absoluteY="720dp" />
+
+    <com.google.android.material.chip.ChipGroup
+        android:id="@+id/timeChipGroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp"
+        app:chipSpacingHorizontal="8dp"
+        app:chipSpacingVertical="8dp"
+        app:singleSelection="true">
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/todayChip"
+            style="@style/ChipCustomStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/today"
+            android:textColor="@color/bg_chip_text_state_list"
+            app:chipBackgroundColor="@color/bg_chip_state_list" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/yesterdayChip"
+            style="@style/ChipCustomStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/yesterday"
+            android:textColor="@color/bg_chip_text_state_list"
+            app:chipBackgroundColor="@color/bg_chip_state_list" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/lastWeekChip"
+            style="@style/ChipCustomStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/last_week"
+            android:textColor="@color/bg_chip_text_state_list"
+            app:chipBackgroundColor="@color/bg_chip_state_list"
+
+            />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/lastMonthChip"
+            style="@style/ChipCustomStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/last_month"
+            android:textColor="@color/bg_chip_text_state_list"
+            app:chipBackgroundColor="@color/bg_chip_state_list"
+
+            />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/Month3Chip"
+            style="@style/ChipCustomStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/_3_months"
+            android:textColor="@color/bg_chip_text_state_list"
+            app:chipBackgroundColor="@color/bg_chip_state_list"
+
+            />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/Month6Chip"
+            style="@style/ChipCustomStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/_6_months"
+            android:textColor="@color/bg_chip_text_state_list"
+            app:chipBackgroundColor="@color/bg_chip_state_list"
+
+            />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/yearChip"
+            style="@style/ChipCustomStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/_1_year"
+            android:textColor="@color/bg_chip_text_state_list"
+            app:chipBackgroundColor="@color/bg_chip_state_list" />
+
+    </com.google.android.material.chip.ChipGroup>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/resetBtn"
+            style="@style/Widget.MaterialComponents.Button.TextButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_weight="1"
+            android:backgroundTint="#2F3549E3"
+            android:text="@string/reset"
+            android:textColor="#3549E3"
+            app:cornerRadius="8dp" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/applyBtn"
+            style="@style/Widget.MaterialComponents.Button.TextButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_weight="1"
+            android:backgroundTint="#3549E3"
+            android:text="@string/apply"
+            android:textColor="#FFB289"
+            app:cornerRadius="8dp" />
+    </LinearLayout>
+</LinearLayout>

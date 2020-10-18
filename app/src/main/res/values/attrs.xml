@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--1-->
+    <declare-styleable name="CustomSeekBar">
+        <!--2-->
+<!--        <attr name="bubbleColor" format="color" />-->
+<!--        <attr name="xthumbColor" format="color" />-->
+<!--        <attr name="xprogressBarColor" format="color" />-->
+<!--        <attr name="bubbleTextColor" format="color"/>-->
+<!--        <attr name="xmaxValue" format="integer"/>-->
+<!--        <attr name="xprogress" format="integer"/>/>-->
+    </declare-styleable>
+</resources>
